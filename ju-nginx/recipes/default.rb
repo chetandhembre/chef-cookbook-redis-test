@@ -12,6 +12,11 @@ cookbook_file "/etc/nginx/nginx.conf" do
   mode "0644"
 end
 
+cookbook_file "/etc/nginx/sites-enabled/nginx.conf" do
+  source "chintu"
+  mode "0644"
+end
+
 service 'nginx' do
   action [ :enable, :restart ]
 end
