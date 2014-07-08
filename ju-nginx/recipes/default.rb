@@ -19,6 +19,10 @@ package 'nginx' do
   action :install
 end
 
+execute "sudo nginx -v" do
+  command "sudo nginx -v"
+end
+
 service 'nginx' do
   action [ :enable, :start ]
 end
