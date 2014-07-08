@@ -29,10 +29,6 @@ server {
        proxy_buffering off;		
        proxy_set_header Host $host;	
     }
-   
-    location /hello {
-       echo "hi";
-    }
 
     location /cloft {
        auth_request /_auth;
@@ -54,9 +50,5 @@ server {
        proxy_intercept_errors off;
       
     }		
-
-    location /images/ {
-        root /www;
-    }
 }
 
