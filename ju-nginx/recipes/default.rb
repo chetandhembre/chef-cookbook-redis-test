@@ -7,6 +7,19 @@
 # All rights reserved - Do Not Redistribute
 #
 
+
+execute "apt-get update" do
+  command "apt-get update"
+end
+
+package 'nginx' do
+  action :install
+end
+
+service 'nginx' do
+  action [ :enable, :start ]
+end
+
 cookbook_file "/etc/nginx/nginx.conf" do
   source "nginx.conf"
   mode "0644"
