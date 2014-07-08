@@ -11,8 +11,8 @@ execute "sudo add-apt-repository ppa:nginx/stable" do
   command "sudo add-apt-repository ppa:nginx/stable"
 end
 
-execute "apt-get update" do
-  command "apt-get update"
+execute "sudo apt-get update" do
+  command "sudo apt-get update"
 end
 
 package 'nginx' do
