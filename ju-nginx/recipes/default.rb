@@ -7,6 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
+execute "sudo add-apt-repository ppa:nginx/stable" do
+  command "sudo add-apt-repository ppa:nginx/stable"
+end
 
 execute "apt-get update" do
   command "apt-get update"
